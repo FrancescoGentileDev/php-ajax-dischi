@@ -1,0 +1,24 @@
+
+
+
+.disks-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+    gap: 2rem;
+}
+
+.disk-container {
+    list-style: none;
+    padding: 2rem;
+    background-color: grey;
+    width: calc(100% / 5 - 4rem);
+}
+
+.posterDisk {
+width: 100%;
+}
+img {
+    width: 100%;
+}
