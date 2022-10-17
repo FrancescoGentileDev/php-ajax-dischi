@@ -22,7 +22,7 @@
         <ul class="disks-wrapper">
     
             <?php
-            include_once __DIR__ . '/data.php';
+            include_once "../data.php";
             foreach ($disks as $disk) {
                ?>
                <li class="disk-container">

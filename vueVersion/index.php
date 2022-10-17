@@ -16,8 +16,8 @@
     <!--#endregion BOOTSTRAP ICON-->
 
     <!--#region BOOTSTRAP-->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!--#endregion BOOTSTRAP-->
 
     <!--#region MY UTILS-->
@@ -25,9 +25,9 @@
     <!--#endregion MY UTILS-->
 
     <!--#region VUE-->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.10/vue.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.10/vue.min.js"
         integrity="sha512-H8u5mlZT1FD7MRlnUsODppkKyk+VEiCmncej8yZW1k/wUT90OQon0F9DSf/2Qh+7L/5UHd+xTLrMszjHEZc2BA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!--#endregion VUE-->
 
     <!--#region BOOTSTRAP SCRIPT-->
@@ -36,32 +36,37 @@
         crossorigin="anonymous" defer></script> -->
     <!--#endregion BOOTSTRAP SCRIPT-->
     <!--#region AXIOS-->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
         integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!--#endregion AXIOS-->
 
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Document</title>
 </head>
 
 <body>
+    <div id="app">
 
+    <div class="container mt-5">
+        <ul class="disks-wrapper">
+    
+               <li class="disk-container" v-for="(disk, index) in disks" :key="index">
+                    <div class="posterDisk" >
+                        <img :src="disk.poster" alt="" srcset="">
+                    </div>
+                    <p class="titleDisk">{{disk.title}}</p>
+                    <p class="authorDisk">{{disk.author}}</p>
+                    <p class="releaseDisk">{{disk.year}}</p>
+               </li>
 
+        </ul>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-    <script type="module" src="javascript/script.js"></script>
+    </div>
+    <script type="module" src="script.js"></script>
 
 </body>
 
