@@ -1,10 +1,20 @@
 <?php
 include_once "../../data.php";
 
-$genere = isset($_GET['genere']) ? $_GET['genere'] : "";
+$genre = isset($_GET['genre']) ? $_GET['genre'] : "";
 
-if ($genere === "") {
+if ($genre === "") {
     header("content-type: application/json");
     echo json_encode($disks);
+}
+else {
+    $newArr = [];
+
+    foreach($disks as $disk) {
+        if(strtolower($disk["genre"]) ==strtolower($genre) )
+            $newArr[] = $disk;
+    }
+    header("content-type: application/json");
+    echo json_encode($newArr);
 }
 ?>

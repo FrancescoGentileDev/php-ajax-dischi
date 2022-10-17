@@ -49,8 +49,10 @@
 
 <body>
     <div id="app">
-
     <div class="container mt-5">
+       
+        <input class="m-5 form-label form-text" type="text" name="genre" id="genre" v-model="textInput" placeholder="insert genre">
+        <button @click="send">send</button>
         <ul class="disks-wrapper">
     
                <li class="disk-container" v-for="(disk, index) in disks" :key="index">
